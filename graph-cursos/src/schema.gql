@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Curso {
+  id: ID!
+  nombre: String!
+  fechanacimiento: String!
+  experiencia: String!
+  tipo: Int!
+  estado: String!
+}
+
+type Query {
+  cursos(id: ID!): Curso!
+}
+
+type Mutation {
+  createCurso(createCursoInput: CreateCursoInput!): Curso!
+  updateCurso(updateCursoInput: UpdateCursoInput!): Curso!
+  removeCurso(id: ID!): Curso!
+}
+
+input CreateCursoInput {
+  identificacion: String!
+  nombre: String!
+  fechanacimiento: String!
+  experiencia: String!
+  tipo: Int!
+  estado: Boolean!
+}
+
+input UpdateCursoInput {
+  identificacion: String
+  nombre: String
+  fechanacimiento: String
+  experiencia: String
+  tipo: Int
+  estado: Boolean
+  id: ID!
+}
